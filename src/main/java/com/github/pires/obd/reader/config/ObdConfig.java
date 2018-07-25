@@ -55,6 +55,7 @@ public final class ObdConfig {
         cmds.add(new ThrottlePositionCommand());
 
         // Fuel
+        cmds.add(new MassAirFlowCommand());
         cmds.add(new FindFuelTypeCommand());
         cmds.add(new ConsumptionRateCommand());
         cmds.add(new EthanolPercentage());
