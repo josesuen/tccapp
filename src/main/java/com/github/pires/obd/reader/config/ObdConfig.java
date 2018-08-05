@@ -43,10 +43,9 @@ public final class ObdConfig {
         ArrayList<ObdCommand> cmds = new ArrayList<>();
 
         // Control
-        //cmds.add(new EquivalentRatioCommand());
+        cmds.add(new EquivalentRatioCommand());
         cmds.add(new TimingAdvanceCommand());
         cmds.add(new TroubleCodesCommand());
-        cmds.add(new VinCommand());
 
         // Engine
         cmds.add(new LoadCommand());
@@ -69,7 +68,7 @@ public final class ObdConfig {
         cmds.add(new FuelTrimCommand(FuelTrim.SHORT_TERM_BANK_1));
         cmds.add(new FuelTrimCommand(FuelTrim.SHORT_TERM_BANK_2));
         cmds.add(new AirFuelRatioCommand());
-        //cmds.add(new WidebandAirFuelRatioCommand());
+        cmds.add(new WidebandAirFuelRatioCommand());
         cmds.add(new OilTempCommand());
 
         // Pressure

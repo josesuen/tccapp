@@ -756,7 +756,7 @@ public class MainActivity extends RoboActivity implements ObdProgressListener, L
             Log.d(TAG, "Uploading " + readings.length + " readings..");
             // instantiate reading service client
             //Configura endpoint para upload/api/drive/{driveid}/obdreading
-            String endpoint = "http://ec2-18-210-7-250.compute-1.amazonaws.com:8080/api/drive/"+ MainActivity.driveid+"/obdreading";
+            String endpoint = "http://192.168.137.1:8080/api/drive/"+ MainActivity.driveid+"/obdreading";
             //final String endpoint = prefs.getString(ConfigActivity.UPLOAD_URL_KEY, "");
             RestAdapter restAdapter = new RestAdapter.Builder()
                     .setEndpoint(endpoint)
