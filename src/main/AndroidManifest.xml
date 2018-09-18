@@ -42,6 +42,7 @@
             android:launchMode="singleInstance"
             android:theme="@style/AppBaseTheme" />
 
+
         <service
             android:name=".io.ObdGatewayService"
             android:exported="false"
@@ -54,6 +55,9 @@
         <activity
             android:name=".activity.NewDrive"
             android:label="@string/title_activity_new_drive" />
+        <activity
+            android:name=".activity.NewTank"
+            android:label="@string/title_activity_new_tank" />
         <activity
             android:name=".activity.HomeActivity"
             android:label="TCC Conectividade V2C">

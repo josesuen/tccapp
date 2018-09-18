@@ -8,6 +8,7 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.google.gson.Gson;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -38,7 +39,7 @@ public class GsonRequest<T> extends Request<T> {
     }
 
     public GsonRequest(String url, Object dataIn, Class<T> clazz, Map<String, String> headers,
-                       Response.Listener<T> listener, Response.ErrorListener errorListener) {
+                            Response.Listener<T> listener, Response.ErrorListener errorListener) {
         super(Method.POST, url, errorListener);
         this.dataIn = dataIn;
         this.clazz = clazz;
@@ -46,6 +47,9 @@ public class GsonRequest<T> extends Request<T> {
         this.listener = listener;
 
     }
+
+
+
 
     @Override
     public byte[] getBody() throws AuthFailureError {

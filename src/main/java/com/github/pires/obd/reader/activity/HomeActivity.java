@@ -25,11 +25,20 @@ public class HomeActivity extends Activity {
                 startActivity(newdriveintent);
             }
         });
+
         //Event listener for settings
         final CardView settings = (CardView) findViewById(R.id.settings);
         settings.setOnClickListener(new View.OnClickListener() {
             public void onClick(View x) {
                 Intent settingsintent = new Intent(HomeActivity.this, ConfigActivity.class);
+                startActivity(settingsintent);
+            }
+        });
+        //Event listener for settings
+        final CardView tank = (CardView) findViewById(R.id.tripsList);
+        tank.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View z) {
+                Intent settingsintent = new Intent(HomeActivity.this, NewTank.class);
                 startActivity(settingsintent);
             }
         });

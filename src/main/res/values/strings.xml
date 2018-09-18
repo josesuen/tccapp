@@ -108,6 +108,7 @@
     <string name="pref_dev_email_summary">Logs will be emailed to this address</string>
     <string name="text_noerrors">There were no errors found.!</string>
     <string name="title_activity_new_drive">NewDrive</string>
+    <string name="title_activity_new_tank">NewTank</string>
     <string name="choose_vehicle">Choose the vehicle</string>
     <string name="create_drive">Create new drive</string>
     <string name="choose_driver">Choose the driver</string>
