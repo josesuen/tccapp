@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Button;
@@ -91,8 +92,15 @@ public class NewDrive extends Activity {
                 //When button gets pressed, a POST request is sent to the API creating a new drive with
                 //the selected vehicle
                 Drive drive = new Drive();
-                drive.setMileage_end(0000);
-                drive.setMileage_start(0000);
+                //Get Comment and mileage
+                final EditText comment = (EditText) findViewById(R.id.description);
+                String comment_temp = comment.getText().toString();
+                drive.setDescription(comment_temp);
+
+                final EditText mileage_start = (EditText) findViewById(R.id.mileage_start);
+                String mileage_start_temp = mileage_start.getText().toString();
+                drive.setMileage_start(Double.parseDouble(mileage_start_temp));
+
                 GsonRequest<Drive> new_drive = new GsonRequest<Drive>("http://ec2-52-15-123-78.us-east-2.compute.amazonaws.com:8080/api/vehicle/"+txtvin.getText().toString()+"/drive",
                         drive,
                         Drive.class,
