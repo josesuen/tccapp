@@ -103,10 +103,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="right"
                 android:tag="SPEED"
                 android:text="@string/text_zero"
-                android:textSize="38sp"
-                android:gravity="right"/>
+                android:textSize="38sp" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -122,7 +122,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
+                android:tag="ENGINE_RPM"
+                android:text="@string/text_zero"
                 android:textSize="36sp"
                 android:gravity="right" />
 

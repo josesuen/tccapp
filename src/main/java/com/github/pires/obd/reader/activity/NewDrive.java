@@ -37,7 +37,7 @@ import java.util.Map;
 public class NewDrive extends Activity {
 
     private Spinner spinner;
-    private static final String PATH_TO_SERVER = "http://ec2-52-15-123-78.us-east-2.compute.amazonaws.com:8080/api/vehicle";
+    private static final String PATH_TO_SERVER = "http://ec2-18-188-51-12.us-east-2.compute.amazonaws.com:8080/api/vehicle";
     /*Lista de veiculos armazenada para o spinner*/
     protected List<Vehicle> spinnerData;
     /*Fila de requests do volley*/
@@ -101,7 +101,7 @@ public class NewDrive extends Activity {
                 String mileage_start_temp = mileage_start.getText().toString();
                 drive.setMileage_start(Double.parseDouble(mileage_start_temp));
 
-                GsonRequest<Drive> new_drive = new GsonRequest<Drive>("http://ec2-52-15-123-78.us-east-2.compute.amazonaws.com:8080/api/vehicle/"+txtvin.getText().toString()+"/drive",
+                GsonRequest<Drive> new_drive = new GsonRequest<Drive>("http://ec2-18-188-51-12.us-east-2.compute.amazonaws.com:8080/api/vehicle/"+txtvin.getText().toString()+"/drive",
                         drive,
                         Drive.class,
                         new HashMap<String, String>(),

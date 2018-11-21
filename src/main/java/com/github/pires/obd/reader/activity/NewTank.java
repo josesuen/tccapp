@@ -48,7 +48,7 @@ import java.text.SimpleDateFormat;
 public class NewTank extends Activity {
 
     private Spinner spinner;
-    private static final String PATH_TO_SERVER = "http://ec2-52-15-123-78.us-east-2.compute.amazonaws.com:8080/api/vehicle";
+    private static final String PATH_TO_SERVER = "http://ec2-18-188-51-12.us-east-2.compute.amazonaws.com:8080/api/vehicle";
     /*Lista de veiculos armazenada para o spinner*/
     protected List<Vehicle> spinnerData;
     /*Fila de requests do volley*/
@@ -135,7 +135,7 @@ public class NewTank extends Activity {
 
 
 
-                GsonRequest<Tank> new_tank = new GsonRequest<Tank>("http://ec2-52-15-123-78.us-east-2.compute.amazonaws.com:8080/api/vehicle/"+txtvin.getText().toString()+"/tank",
+                GsonRequest<Tank> new_tank = new GsonRequest<Tank>("http://ec2-18-188-51-12.us-east-2.compute.amazonaws.com:8080/api/vehicle/"+txtvin.getText().toString()+"/tank",
                         tank,
                         Tank.class,
                         new HashMap<String, String>(),
